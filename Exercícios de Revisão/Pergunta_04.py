@@ -11,6 +11,10 @@ print("\n")
 m2 = np.random.randint(1,100, (10,10))
 print(m2)
 
+soma = m1 + m2
+print("\n")
+print(soma)
+
 try:
     matrix1= open("Matrix1.txt", "w")
     matrix1.write("aaaaaaaaaa")
@@ -21,3 +25,4 @@ try:
 finally:
     matrix1.close
     matrix2.close
+
