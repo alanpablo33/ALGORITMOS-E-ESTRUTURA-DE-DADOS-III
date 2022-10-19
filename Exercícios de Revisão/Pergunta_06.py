@@ -2,29 +2,27 @@
 #contendo elementos de chave par e outra de chave ímpar. Faça um
 #programa para testar a função implementadas.
 
+from collections import deque
 
-def filas(fila):
-    
-    fila_impare= [] 
-    fila_pares= []
+fila1=deque([])
+fila2=deque([])
+fila=deque([])
 
-    for elemeto in fila:
-        if elemeto % 2 == 0: #se o elemento divide por dois e se resto e 0
-            fila_pares.append(elemeto)
-      
-        else: # se não
-            fila_impare.append(elemeto)
-    print(fila)
-    print(fila_impare)
-    print(fila_pares)
-    
+for i in range(10):
+    x = int(input("Digite os 10 Valores Numericos: "))
+    fila.append(x)
 
+    if x %2==0:
+        fila2.append(x)
+        
+    else:
+        fila1.append(x)
+        
+print("Todos os Elementos da FILA: ", fila)
+print("Adicionando um elemento a fila PAR: ", fila2)
+print("Adicionando um elemento a fila IMPAR: ", fila1)
 
-fila_test = [1,2,3,4,5,6,7,8,9,10]
-#x=12
-
-#while x > len(fila_test):
-#    elemet = input("Digite um Numero: ")
-#    fila_test.append(elemet)   
-
-filas(fila_test)
+#remoção de valores da Fila
+#Primeiros a Chegar , Primeiros a Sair
+fila.popleft()
+fila.popleft()
